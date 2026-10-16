@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'pages/menu_list_page.dart';
-import 'pages/menu_detail_page.dart';
-import 'pages/order_page.dart';
+import 'pages/home_page.dart';         
+import 'pages/menu_list_page.dart';   
+import 'pages/menu_detail_page.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -20,13 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
       ),
-
-      // Best practice: daftarkan semua route di satu tempat
       initialRoute: '/',
       routes: {
-        '/': (context) => const MenuListPage(),
+        '/': (context) => const HomePage(),          
+        '/menu': (context) => MenuListPage(),   // <-- Hapus kata 'const' di sini
         '/detail': (context) => const MenuDetailPage(),
-        '/pesan': (context) => const OrderPage(),
       },
     );
   }
