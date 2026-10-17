@@ -13,9 +13,7 @@ class MenuListPage extends StatefulWidget {
 class _MenuListPageState extends State<MenuListPage> {
   String selectedCategory = 'Semua Menu';
 
-  // Daftar menu lengkap dengan foto kuliner asli yang akurat
   final List<Map<String, dynamic>> menuItems = [
-    // --- MAKANAN BERAT ---
     {
       'name': 'Nasi Goreng',
       'category': 'Makanan Berat',
@@ -97,8 +95,6 @@ class _MenuListPageState extends State<MenuListPage> {
       'image': 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=500',
       'badge': 'Lezat',
     },
-
-    // --- MAKANAN RINGAN / SNACK ---
     {
       'name': 'Kentang Goreng (French Fries)',
       'category': 'Snack / Jajanan',
@@ -127,71 +123,6 @@ class _MenuListPageState extends State<MenuListPage> {
       'badge': 'Dimsum 🥟',
     },
     {
-      'name': 'Pisang / Tahu Mendoan',
-      'category': 'Snack / Jajanan',
-      'price': 9000,
-      'priceStr': 'Rp 9.000',
-      'desc': 'Gorengan berbalut tepung terigu berbumbu bawang & daun bawang.',
-      'image': 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500',
-      'badge': 'Gorengan',
-    },
-    {
-      'name': 'Telur Gulung',
-      'category': 'Snack / Jajanan',
-      'price': 8000,
-      'priceStr': 'Rp 8.000',
-      'desc': 'Adonan telur digulung menggunakan tusuk sate dalam minyak panas.',
-      'image': 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500',
-      'badge': 'Jadul',
-    },
-    {
-      'name': 'Bakso Goreng (Basreng)',
-      'category': 'Snack / Jajanan',
-      'price': 10000,
-      'priceStr': 'Rp 10.000',
-      'desc': 'Bakso diiris tipis digoreng garing dengan taburan bubuk cabai.',
-      'image': 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500',
-      'badge': 'Pedas 🌶️',
-    },
-    {
-      'name': 'Onion Rings',
-      'category': 'Snack / Jajanan',
-      'price': 11000,
-      'priceStr': 'Rp 11.000',
-      'desc': 'Irisan bawang bombay tebal dibalut adonan tepung hingga krispi.',
-      'image': 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=500',
-      'badge': 'Krispi',
-    },
-    {
-      'name': 'Roti Bakar Cokelat Keju',
-      'category': 'Snack / Jajanan',
-      'price': 13000,
-      'priceStr': 'Rp 13.000',
-      'desc': 'Roti tawar dipanggang mentega dengan isian meses dan keju melimpah.',
-      'image': 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500',
-      'badge': 'Manis 🍞',
-    },
-    {
-      'name': 'Pisang Bakar / Goreng Keju',
-      'category': 'Snack / Jajanan',
-      'price': 12000,
-      'priceStr': 'Rp 12.000',
-      'desc': 'Pisang dengan topping susu kental manis, keju parut, dan cokelat.',
-      'image': 'https://images.unsplash.com/photo-1603052875302-d376b7c0638a?w=500',
-      'badge': 'Favorit',
-    },
-    {
-      'name': 'Churros & Chocolate Dip',
-      'category': 'Snack / Jajanan',
-      'price': 16000,
-      'priceStr': 'Rp 16.000',
-      'desc': 'Kue goreng khas Spanyol bentuk panjang disajikan dengan saus cokelat.',
-      'image': 'https://images.unsplash.com/photo-1624371414361-e670ff628fdb?w=500',
-      'badge': 'Dessert 🍫',
-    },
-
-    // --- MINUMAN ---
-    {
       'name': 'Es Kopi Susu Gula Aren',
       'category': 'Minuman Segar',
       'price': 18000,
@@ -201,24 +132,6 @@ class _MenuListPageState extends State<MenuListPage> {
       'badge': 'Kopi ☕',
     },
     {
-      'name': 'Americano / Long Black',
-      'category': 'Minuman Segar',
-      'price': 15000,
-      'priceStr': 'Rp 15.000',
-      'desc': 'Espresso yang dicampur dengan air panas atau air dingin.',
-      'image': 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500',
-      'badge': 'Black Coffee',
-    },
-    {
-      'name': 'Café Latte / Cappuccino',
-      'category': 'Minuman Segar',
-      'price': 20000,
-      'priceStr': 'Rp 20.000',
-      'desc': 'Espresso dengan takaran susu kukus dan busa tebal seimbang.',
-      'image': 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=500',
-      'badge': 'Signature',
-    },
-    {
       'name': 'Matcha Latte',
       'category': 'Minuman Segar',
       'price': 19000,
@@ -226,42 +139,6 @@ class _MenuListPageState extends State<MenuListPage> {
       'desc': 'Serbuk teh hijau khas Jepang yang dicampur susu segar.',
       'image': 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500',
       'badge': 'Green Tea 🍵',
-    },
-    {
-      'name': 'Thai Tea / Milk Tea',
-      'category': 'Minuman Segar',
-      'price': 15000,
-      'priceStr': 'Rp 15.000',
-      'desc': 'Teh hitam khas Thailand atau teh susu dengan tambahan boba.',
-      'image': 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500',
-      'badge': 'Manis',
-    },
-    {
-      'name': 'Classic Hot / Iced Chocolate',
-      'category': 'Minuman Segar',
-      'price': 18000,
-      'priceStr': 'Rp 18.000',
-      'desc': 'Minuman cokelat kaya rasa disajikan hangat atau dingin.',
-      'image': 'https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=500',
-      'badge': 'Cokelat 🍫',
-    },
-    {
-      'name': 'Lemon Mint Mojito',
-      'category': 'Minuman Segar',
-      'price': 16000,
-      'priceStr': 'Rp 16.000',
-      'desc': 'Air soda dengan perasan lemon, daun mint, dan sirup segar.',
-      'image': 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500',
-      'badge': 'Mocktail 🍋',
-    },
-    {
-      'name': 'Fruit Juice / Smoothies',
-      'category': 'Minuman Segar',
-      'price': 15000,
-      'priceStr': 'Rp 15.000',
-      'desc': 'Jus buah segar pilihan (alpukat, mangga, atau jeruk) kaya vitamin.',
-      'image': 'https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=500',
-      'badge': 'Sehat 🥤',
     },
   ];
 
@@ -276,7 +153,7 @@ class _MenuListPageState extends State<MenuListPage> {
         return AlertDialog(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           backgroundColor: const Color(0xFFFDFBF7),
-          title: Text('Data Pemesan', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: const Color(0xFF3E2723))),
+          title: Text('Data Pemesan', style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFF3E2723))),
           content: Form(
             key: formKey,
             child: SizedBox(
@@ -284,29 +161,20 @@ class _MenuListPageState extends State<MenuListPage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    'Masukkan nama dan nomor telepon untuk menyelesaikan pesanan:',
-                    style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
-                  ),
+                  Text('Masukkan nama dan nomor telepon untuk menyelesaikan pesanan:', style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey)),
                   const SizedBox(height: 16),
                   TextFormField(
                     controller: namaController,
-                    style: GoogleFonts.poppins(fontSize: 14),
-                    decoration: InputDecoration(
-                      labelText: 'Nama Lengkap *',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
+                    style: GoogleFonts.montserrat(fontSize: 14),
+                    decoration: InputDecoration(labelText: 'Nama Lengkap *', border: OutlineInputBorder(borderRadius: BorderRadius.circular(12))),
                     validator: (val) => val == null || val.trim().isEmpty ? 'Nama wajib diisi' : null,
                   ),
                   const SizedBox(height: 12),
                   TextFormField(
                     controller: telpController,
                     keyboardType: TextInputType.phone,
-                    style: GoogleFonts.poppins(fontSize: 14),
-                    decoration: InputDecoration(
-                      labelText: 'Nomor Telepon / WhatsApp *',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
+                    style: GoogleFonts.montserrat(fontSize: 14),
+                    decoration: InputDecoration(labelText: 'Nomor Telepon / WhatsApp *', border: OutlineInputBorder(borderRadius: BorderRadius.circular(12))),
                     validator: (val) => val == null || val.trim().isEmpty ? 'Nomor telepon wajib diisi' : null,
                   ),
                 ],
@@ -316,17 +184,13 @@ class _MenuListPageState extends State<MenuListPage> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: Text('Batal', style: GoogleFonts.poppins(color: const Color(0xFF4A3B32))),
+              child: Text('Batal', style: GoogleFonts.montserrat(color: const Color(0xFF4A3B32))),
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF4A3B32),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-              ),
+              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A3B32), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
               onPressed: () {
                 if (formKey.currentState!.validate()) {
                   String nama = namaController.text;
-
                   Navigator.pop(context);
 
                   showDialog(
@@ -343,54 +207,20 @@ class _MenuListPageState extends State<MenuListPage> {
                             children: [
                               Container(
                                 padding: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                  color: Colors.brown.shade50,
-                                  shape: BoxShape.circle,
-                                  border: Border.all(color: Colors.brown.shade200),
-                                ),
-                                child: const Icon(
-                                  Icons.celebration_rounded,
-                                  size: 40,
-                                  color: Color(0xFF4A3B32),
-                                ),
+                                decoration: BoxDecoration(color: Colors.brown.shade50, shape: BoxShape.circle, border: Border.all(color: Colors.brown.shade200)),
+                                child: const Icon(Icons.celebration_rounded, size: 40, color: Color(0xFF4A3B32)),
                               ),
                               const SizedBox(height: 16),
-                              Text(
-                                'Terima Kasih, $nama!',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFF3E2723),
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
+                              Text('Terima Kasih, $nama!', style: GoogleFonts.montserrat(fontSize: 18, fontWeight: FontWeight.bold, color: const Color(0xFF3E2723)), textAlign: TextAlign.center),
                               const SizedBox(height: 8),
-                              Text(
-                                'Pesanan segera diproses.\nTerima kasih sudah memesan, selamat menunggu pesanan ya! 🍲',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 13,
-                                  color: Colors.grey,
-                                  height: 1.4,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
+                              Text('Pesanan segera diproses.\nTerima kasih sudah memesan, selamat menunggu pesanan ya! 🍲', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey, height: 1.4), textAlign: TextAlign.center),
                               const SizedBox(height: 24),
                               SizedBox(
                                 width: double.infinity,
                                 child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color(0xFF4A3B32),
-                                    foregroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(vertical: 12),
-                                    elevation: 0,
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text('OK, Siap!', style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.bold)),
+                                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A3B32), foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)), padding: const EdgeInsets.symmetric(vertical: 12), elevation: 0),
+                                  onPressed: () => Navigator.pop(context),
+                                  child: Text('OK, Siap!', style: GoogleFonts.montserrat(fontSize: 13, fontWeight: FontWeight.bold)),
                                 ),
                               ),
                             ],
@@ -405,7 +235,7 @@ class _MenuListPageState extends State<MenuListPage> {
                   });
                 }
               },
-              child: Text('Kirim Pesanan', style: GoogleFonts.poppins(color: Colors.white)),
+              child: Text('Kirim Pesanan', style: GoogleFonts.montserrat(color: Colors.white)),
             ),
           ],
         );
@@ -422,11 +252,11 @@ class _MenuListPageState extends State<MenuListPage> {
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
               backgroundColor: const Color(0xFFFDFBF7),
-              title: Text('Keranjang Belanja', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: const Color(0xFF3E2723))),
+              title: Text('Keranjang Belanja', style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFF3E2723))),
               content: SizedBox(
                 width: 320,
                 child: CartManager.items.isEmpty
-                    ? Text('Keranjang masih kosong nih. Yuk pesan dulu!', style: GoogleFonts.poppins(fontSize: 13))
+                    ? Text('Keranjang masih kosong nih. Yuk pesan dulu!', style: GoogleFonts.montserrat(fontSize: 13))
                     : Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -437,15 +267,12 @@ class _MenuListPageState extends State<MenuListPage> {
                               final cartItem = CartManager.items[index];
                               return ListTile(
                                 contentPadding: EdgeInsets.zero,
-                                title: Text('${cartItem.namaMenu} (${cartItem.jumlah}x)', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
-                                subtitle: Text(
-                                  cartItem.catatan.isEmpty ? 'Tanpa catatan' : 'Catatan: ${cartItem.catatan}',
-                                  style: GoogleFonts.poppins(fontSize: 11),
-                                ),
+                                title: Text('${cartItem.namaMenu} (${cartItem.jumlah}x)', style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 13)),
+                                subtitle: Text(cartItem.catatan.isEmpty ? 'Tanpa catatan' : 'Catatan: ${cartItem.catatan}', style: GoogleFonts.montserrat(fontSize: 11)),
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Text('Rp ${cartItem.totalHarga}', style: GoogleFonts.poppins(fontSize: 12)),
+                                    Text('Rp ${cartItem.totalHarga}', style: GoogleFonts.montserrat(fontSize: 12)),
                                     IconButton(
                                       icon: const Icon(Icons.delete_outline, size: 18, color: Colors.red),
                                       onPressed: () {
@@ -464,18 +291,15 @@ class _MenuListPageState extends State<MenuListPage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('Total Keseluruhan:', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13)),
-                              Text('Rp ${CartManager.grandTotal}', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: const Color(0xFF6D4C41), fontSize: 13)),
+                              Text('Total Keseluruhan:', style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 13)),
+                              Text('Rp ${CartManager.grandTotal}', style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFF6D4C41), fontSize: 13)),
                             ],
                           ),
                         ],
                       ),
               ),
               actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: Text('Tutup', style: GoogleFonts.poppins(color: const Color(0xFF4A3B32))),
-                ),
+                TextButton(onPressed: () => Navigator.pop(context), child: Text('Tutup', style: GoogleFonts.montserrat(color: const Color(0xFF4A3B32)))),
                 if (CartManager.items.isNotEmpty)
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A3B32)),
@@ -483,7 +307,7 @@ class _MenuListPageState extends State<MenuListPage> {
                       Navigator.pop(context);
                       _showCheckoutForm(context);
                     },
-                    child: Text('Checkout Pesanan', style: GoogleFonts.poppins(color: Colors.white)),
+                    child: Text('Checkout Pesanan', style: GoogleFonts.montserrat(color: Colors.white)),
                   ),
               ],
             );
@@ -506,9 +330,10 @@ class _MenuListPageState extends State<MenuListPage> {
         elevation: 0,
         centerTitle: true,
         iconTheme: const IconThemeData(color: Color(0xFF4A3B32)),
+        // KEMBALIKAN JUDUL APPBAR JADI "DAFTAR MENU KANTIN" SESUAI SEMULA
         title: Text(
           'DAFTAR MENU KANTIN',
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.montserrat(
             color: const Color(0xFF4A3B32),
             fontWeight: FontWeight.bold,
             letterSpacing: 1.5,
@@ -528,14 +353,8 @@ class _MenuListPageState extends State<MenuListPage> {
                   top: 8,
                   child: Container(
                     padding: const EdgeInsets.all(4),
-                    decoration: const BoxDecoration(
-                      color: Colors.red,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Text(
-                      '${CartManager.items.length}',
-                      style: GoogleFonts.poppins(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
-                    ),
+                    decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+                    child: Text('${CartManager.items.length}', style: GoogleFonts.montserrat(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
                   ),
                 ),
             ],
@@ -545,11 +364,11 @@ class _MenuListPageState extends State<MenuListPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // BANNER LOGO
+          // BANNER KANTIN BU SARI DI ATAS
           Container(
             width: double.infinity,
             margin: const EdgeInsets.all(16.0),
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(18.0),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Color(0xFF3E2723), Color(0xFF5D4037)],
@@ -558,11 +377,7 @@ class _MenuListPageState extends State<MenuListPage> {
               ),
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
-                BoxShadow(
-                  color: Colors.brown.withOpacity(0.2),
-                  blurRadius: 8,
-                  offset: const Offset(0, 4),
-                ),
+                BoxShadow(color: Colors.brown.withOpacity(0.2), blurRadius: 8, offset: const Offset(0, 4)),
               ],
             ),
             child: Row(
@@ -573,10 +388,7 @@ class _MenuListPageState extends State<MenuListPage> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.white.withOpacity(0.5), width: 2),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/logo kantin.jpeg'),
-                      fit: BoxFit.cover,
-                    ),
+                    image: const DecorationImage(image: AssetImage('assets/logo kantin.jpeg'), fit: BoxFit.cover),
                   ),
                 ),
                 const SizedBox(width: 16),
@@ -584,19 +396,9 @@ class _MenuListPageState extends State<MenuListPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Kantin Bu Sari 🍲',
-                        style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      Text('Kantin Bu Sari 🍲', style: GoogleFonts.montserrat(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                       const SizedBox(height: 4),
-                      Text(
-                        'Pilih menu favoritmu di bawah dan nikmati hidangan lezat hari ini!',
-                        style: GoogleFonts.poppins(color: const Color(0xFFD7CCC8), fontSize: 12),
-                      ),
+                      Text('Pilih menu favoritmu di bawah dan nikmati hidangan lezat hari ini!', style: GoogleFonts.montserrat(color: const Color(0xFFD7CCC8), fontSize: 12)),
                     ],
                   ),
                 ),
@@ -621,17 +423,10 @@ class _MenuListPageState extends State<MenuListPage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
-            child: Text(
-              'Menampilkan: $selectedCategory',
-              style: GoogleFonts.poppins(
-                color: const Color(0xFF8D6E63),
-                fontWeight: FontWeight.w600,
-                fontSize: 13,
-              ),
-            ),
+            child: Text('Menampilkan: $selectedCategory', style: GoogleFonts.montserrat(color: const Color(0xFF8D6E63), fontWeight: FontWeight.w600, fontSize: 13)),
           ),
 
-          // DAFTAR MENU DENGAN FOTO MAKANAN ASLI DARI UNSPLASH
+          // DAFTAR MENU LENGKAP
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -644,51 +439,22 @@ class _MenuListPageState extends State<MenuListPage> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: Colors.brown.shade100, width: 1),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.brown.withOpacity(0.04),
-                        blurRadius: 8,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
+                    boxShadow: [BoxShadow(color: Colors.brown.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 3))],
                   ),
                   child: ListTile(
                     contentPadding: const EdgeInsets.all(16),
-                    // FOTO MAKANAN KULINER ASLI
                     leading: Container(
                       width: 60,
                       height: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        image: DecorationImage(
-                          image: NetworkImage(menu['image']),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), image: DecorationImage(image: NetworkImage(menu['image']), fit: BoxFit.cover)),
                     ),
                     title: Row(
                       children: [
-                        Expanded(
-                          child: Text(
-                            menu['name'],
-                            style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                              color: const Color(0xFF3E2723),
-                            ),
-                          ),
-                        ),
+                        Expanded(child: Text(menu['name'], style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 14, color: const Color(0xFF3E2723)))),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: Colors.brown.shade50,
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: Colors.brown.shade200),
-                          ),
-                          child: Text(
-                            menu['badge'],
-                            style: GoogleFonts.poppins(fontSize: 10, color: const Color(0xFF6D4C41), fontWeight: FontWeight.bold),
-                          ),
+                          decoration: BoxDecoration(color: Colors.brown.shade50, borderRadius: BorderRadius.circular(6), border: Border.all(color: Colors.brown.shade200)),
+                          child: Text(menu['badge'], style: GoogleFonts.montserrat(fontSize: 10, color: const Color(0xFF6D4C41), fontWeight: FontWeight.bold)),
                         ),
                       ],
                     ),
@@ -696,44 +462,21 @@ class _MenuListPageState extends State<MenuListPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 6),
-                        Text(
-                          menu['desc'],
-                          style: GoogleFonts.poppins(color: Colors.grey, fontSize: 11),
-                        ),
+                        Text(menu['desc'], style: GoogleFonts.montserrat(color: Colors.grey, fontSize: 11)),
                         const SizedBox(height: 8),
-                        Text(
-                          menu['priceStr'],
-                          style: GoogleFonts.poppins(
-                            color: const Color(0xFF6D4C41),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 13,
-                          ),
-                        ),
+                        Text(menu['priceStr'], style: GoogleFonts.montserrat(color: const Color(0xFF6D4C41), fontWeight: FontWeight.bold, fontSize: 13)),
                       ],
                     ),
                     trailing: Padding(
                       padding: const EdgeInsets.only(top: 15),
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => OrderPage(menuItem: menu),
-                            ),
-                          ).then((_) {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => OrderPage(menuItem: menu))).then((_) {
                             setState(() {});
                           });
                         },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF4A3B32),
-                          foregroundColor: Colors.white,
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                        ),
-                        child: Text('Pesan', style: GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.bold)),
+                        style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A3B32), foregroundColor: Colors.white, elevation: 0, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)), padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10)),
+                        child: Text('Pesan', style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.bold)),
                       ),
                     ),
                   ),
@@ -751,30 +494,14 @@ class _MenuListPageState extends State<MenuListPage> {
     return Padding(
       padding: const EdgeInsets.only(right: 8.0),
       child: ElevatedButton(
-        onPressed: () {
-          setState(() {
-            selectedCategory = categoryName;
-          });
-        },
+        onPressed: () => setState(() => selectedCategory = categoryName),
         style: ElevatedButton.styleFrom(
           backgroundColor: isSelected ? const Color(0xFF4A3B32) : Colors.white,
           foregroundColor: isSelected ? Colors.white : const Color(0xFF6D4C41),
           elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-            side: BorderSide(
-              color: isSelected ? const Color(0xFF4A3B32) : Colors.brown.shade200,
-            ),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20), side: BorderSide(color: isSelected ? const Color(0xFF4A3B32) : Colors.brown.shade200)),
         ),
-        child: Text(
-          categoryName,
-          style: GoogleFonts.poppins(
-            fontWeight: FontWeight.bold,
-            fontSize: 12,
-            color: isSelected ? Colors.white : const Color(0xFF4A3B32),
-          ),
-        ),
+        child: Text(categoryName, style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 12, color: isSelected ? Colors.white : const Color(0xFF4A3B32))),
       ),
     );
   }

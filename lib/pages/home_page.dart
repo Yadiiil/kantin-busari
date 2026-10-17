@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart'; // <-- Tambahkan import ini
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -62,20 +63,21 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 16),
-                            const Text(
+                            Text(
                               'Good Food, Good Mood',
-                              style: TextStyle(
+                              style: GoogleFonts.montserrat(
                                 fontSize: 14,
-                                color: Color(0xFFD7CCC8), // Krem lembut
+                                color: const Color(0xFFD7CCC8), // Krem lembut
                                 fontStyle: FontStyle.italic,
                                 letterSpacing: 1.5,
                               ),
                               textAlign: TextAlign.center,
                             ),
                             const SizedBox(height: 6),
-                            const Text(
+                            // NAMA KANTIN DIUBAH MENJADI MONTSERRAT
+                            Text(
                               'Kantin Bu Sari 🍲',
-                              style: TextStyle(
+                              style: GoogleFonts.montserrat(
                                 fontSize: 36,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -86,7 +88,7 @@ class HomePage extends StatelessWidget {
                             const SizedBox(height: 10),
                             Text(
                               'Nikmati kelezatan masakan rumahan autentik dengan cita rasa istimewa, higienis, dan harga ramah di kantong.',
-                              style: TextStyle(
+                              style: GoogleFonts.montserrat(
                                 fontSize: 14,
                                 color: Colors.white.withOpacity(0.9),
                                 height: 1.4,
@@ -111,9 +113,9 @@ class HomePage extends StatelessWidget {
                                   ),
                                   elevation: 2,
                                 ),
-                                child: const Text(
+                                child: Text(
                                   'JELAJAHI MENU LEZAT ➔',
-                                  style: TextStyle(
+                                  style: GoogleFonts.montserrat(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
@@ -137,18 +139,18 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: Column(
                 children: [
-                  const Text(
+                  Text(
                     'Why Choose Us? ⭐',
-                    style: TextStyle(
+                    style: GoogleFonts.montserrat(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF3E2723),
+                      color: const Color(0xFF3E2723),
                     ),
                   ),
                   const SizedBox(height: 6),
-                  const Text(
+                  Text(
                     'Kami berkomitmen memberikan kualitas dan kenyamanan terbaik untuk setiap pelanggan.',
-                    style: TextStyle(fontSize: 13, color: Colors.grey),
+                    style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 24),
@@ -173,9 +175,9 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               color: const Color(0xFFF3EDE2),
               width: double.infinity,
-              child: const Text(
+              child: Text(
                 '© 2026 Kantin Bu Sari. All Rights Reserved.',
-                style: TextStyle(color: Color(0xFF8D6E63), fontSize: 11),
+                style: GoogleFonts.montserrat(color: const Color(0xFF8D6E63), fontSize: 11),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -207,13 +209,13 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             title,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF3E2723)),
+            style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 14, color: const Color(0xFF3E2723)),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 4),
           Text(
             desc,
-            style: const TextStyle(color: Colors.grey, fontSize: 11, height: 1.3),
+            style: GoogleFonts.montserrat(color: Colors.grey, fontSize: 11, height: 1.3),
             textAlign: TextAlign.center,
           ),
         ],
